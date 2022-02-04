@@ -3,11 +3,11 @@
 namespace Fibonacci {
     static class Program {
         static void Main(string[] args) {
-            int num = 5;
+            BigInteger num = 5;
             if (args.Length == 1) 
                 num = int.Parse(args[0]);
 
-            int[] fibonacci = CreateFibonacciSeries(num);
+            BigInteger[] fibonacci = CreateFibonacciSeries(num);
 
             for (int i = 0; i < fibonacci.Length; i++) {
                 Console.Out.Write(fibonacci[i]);
@@ -17,7 +17,7 @@ namespace Fibonacci {
         }
 
         static int[] CreateFibonacciSeries(int count) {
-            int[] fibonacci = new int[count];
+            BigInteger[] fibonacci = new BigInteger[count];
             fibonacci[0] = 0;
             fibonacci[1] = 1;
 
