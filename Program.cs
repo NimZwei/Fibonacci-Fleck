@@ -1,18 +1,20 @@
 ﻿using System;
+using System.Numerics;
 
 namespace Fibonacci {
     static class Program {
         static void Main(string[] args) {
             int num = 5;
-            if (args.Length == 1) 
+            if (args.Length == 1)
                 num = int.Parse(args[0]);
 
-            int[] fibonacci = CreateFibonacciSeries(num);
+            BigInteger[] fibonacci = CreateFibonacciSeries(num);
 
             for (int i = 0; i < fibonacci.Length; i++) {
                 Console.Out.Write(fibonacci[i]);
                 Console.Out.Write(" ");
             }
+
             Console.Out.WriteLine();
         }
 
